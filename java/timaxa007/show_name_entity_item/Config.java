@@ -7,7 +7,7 @@ import net.minecraftforge.common.config.Configuration;
 public class Config {
 
 	public static Configuration config;
-	public static final String categoryGui = "gui";
+	public static final String category = "setup";
 
 	public static void init(File file) {
 		config = new Configuration(file);
@@ -16,7 +16,7 @@ public class Config {
 	}
 
 	public static void syncConfig() {
-		EventsForge.radius = config.get(categoryGui, "radius", EventsForge.radius).getDouble();
+		EventsForge.radius = config.get(category, "radius", EventsForge.radius).getDouble();
 		if (config.hasChanged()) config.save();
 	}
 

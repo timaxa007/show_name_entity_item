@@ -7,7 +7,7 @@ import net.minecraftforge.fml.client.config.GuiConfig;
 public class ConfigGui extends GuiConfig {
 
 	public ConfigGui(GuiScreen parent) {
-		super(parent, new ConfigElement(Config.config.getCategory(Config.categoryGui)).getChildElements(),
+		super(parent, new ConfigElement(Config.config.getCategory(Config.category)).getChildElements(),
 				ShowNameEntityItemMod.MODID, false, false, GuiConfig.getAbridgedConfigPath(Config.config.toString()));
 	}
 
